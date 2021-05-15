@@ -29,6 +29,16 @@ public class Cd {
 		return brani.get(indice);
 	}
 	
+	public Brano getBrano( int indice ) {
+		
+		if( indice >= 0 && indice < brani.size() ) {
+			
+			return brani.get(indice);
+		}
+		
+		return null;
+	}
+	
 	public boolean haTitolo(String titolo) {
 		
 		if( this.titolo.equals(titolo) ) {
