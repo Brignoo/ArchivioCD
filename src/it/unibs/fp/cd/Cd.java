@@ -14,31 +14,43 @@ public class Cd {
 		super();
 		this.titolo = titolo;
 		this.autore = autore;
+		this.brani = new ArrayList<Brano>();
 	}
 	
 	public void aggiungiBrano( Brano b ){
-		
-		brani.add(b);
+	
+		this.brani.add(b);
 	}
 	
-	public Brano getCasuale() {
+	public Brano branoCasuale() {
 		
-		int indice = EstrazioniCasuali.estraiIntero(0, brani.size());
+		int indice = EstrazioniCasuali.estraiIntero(0, brani.size()-1);
 		
 		return brani.get(indice);
+	}
+	
+	public boolean haTitolo(String titolo) {
+		
+		if( this.titolo.equals(titolo) ) {
+			return true;
+		}
+		
+		return false;
 	}
 	
 	@Override
 	public String toString() {
 		
-		String s = "";
+		String s = "Titolo: " + this.titolo + ", Autore: " + this.autore + ", Lista dei brani: ";
 		
-		for( Brano elemento : brani ) {
+		if ( !brani.isEmpty() ) {
 			
-			s = s + (brani.indexOf(elemento) + 1) + " " + elemento.getTitolo() + "\n";
-		}
+			for( Brano elemento : brani ) {
 		
-		return null;
+				s = s + elemento.toString();
+			}
+		}
+		return s;
 	}
 	
 }

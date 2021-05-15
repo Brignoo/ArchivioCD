@@ -6,6 +6,9 @@ import java.util.GregorianCalendar;
 
 public class Brano {
 	
+	
+	private static final String DESCRIZIONE = "%s [%s:%s] ";
+	
 	private String titolo;
 	private int minuti;
 	private int secondi;
@@ -29,7 +32,27 @@ public class Brano {
 	
 	public String toString() {
 		
-		return this.titolo + " [" + this.minuti + ":" + this.secondi + "] ";
+		String m, s;
+		
+		if( minuti < 10 ) {
+			
+			m = "0" + minuti;
+		}
+		else {
+			
+			m = "" + minuti;
+		}
+		
+		if( secondi < 10 ) {
+			
+			s = "0" + secondi;
+		}
+		else {
+			
+			s = "" + secondi;
+		}
+		
+		return String.format(DESCRIZIONE, this.titolo, m, s);
 	}
 
 }
