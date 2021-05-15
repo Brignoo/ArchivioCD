@@ -7,13 +7,14 @@ import java.util.GregorianCalendar;
 public class Brano {
 	
 	private String titolo;
-	private Calendar durata;
+	private int minuti;
+	private int secondi;
 
 	public Brano(String titolo, int minuti, int secondi) {
 		super();
 		this.titolo = titolo;
-		this.durata = new GregorianCalendar();
-		
+		this.minuti = minuti;
+		this.secondi = secondi;
 	}
 
 	public String getTitolo() {
