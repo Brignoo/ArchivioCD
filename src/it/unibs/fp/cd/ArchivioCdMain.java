@@ -18,9 +18,13 @@ public class ArchivioCdMain {
 	private static final String MESSAGGIO_TITOLO_BRANO = "\nInserisci il titolo del nuovo brano: ";
 	private static final String MESSAGGIO_MINUTI_BRANO = "Quanti minuta dura il brano? ";
 	private static final String MESSAGGIO_SECONDI_BRANO = "Quanti secondi dura il brano? ";
-	private static final String MESSAGGIO_RIMUOVI_BRANO_NOME = "Qual'è il titolo del brano che vuoi rimuovere? ";
-	private static final String MESSAGGIO_RIMUOVI_BRANO_NO_CD = "Non è stato trovato nessun brano con quel titolo";
+	private static final String MESSAGGIO_RIMUOVI_CD_NOME = "Qual è il titolo del CD che vuoi rimuovere? ";
+	private static final String MESSAGGIO_RIMUOVI_NO_CD = "Non è stato trovato nessun CD con quel titolo";
 	private static final String MESSAGGIO_ARCHIVIO_VUOTO = "Non ci sono CD nella tua collezione.";
+	
+	private static final int MINIMO = 0;
+	private static final int MASSIMO = 60;
+	private static final int MINIMO_SENZA_ZERO = 1;
 
 	/**
 	 * Metodo per la creazione di un nuovo brano
@@ -32,13 +36,13 @@ public class ArchivioCdMain {
 		int minuti, secondi;
 		
 		titolo = MyInputDati.leggiStringaNonVuota(MESSAGGIO_TITOLO_BRANO);
-		minuti = MyInputDati.leggiInteroNonNegativo(MESSAGGIO_MINUTI_BRANO);
+		minuti = MyInputDati.leggiIntero(MESSAGGIO_MINUTI_BRANO, MINIMO, MASSIMO);
 		
 		if( minuti > 0 ) {
-			secondi = MyInputDati.leggiInteroNonNegativo(MESSAGGIO_SECONDI_BRANO);
+			secondi = MyInputDati.leggiIntero(MESSAGGIO_SECONDI_BRANO, MINIMO, MASSIMO);
 		}
 		else {
-			secondi = MyInputDati.leggiInteroPositivo(MESSAGGIO_SECONDI_BRANO);
+			secondi = MyInputDati.leggiIntero(MESSAGGIO_SECONDI_BRANO, MINIMO_SENZA_ZERO, MASSIMO);
 		}
 		
 		
@@ -69,6 +73,7 @@ public class ArchivioCdMain {
 		
 		return nuovoCd;
 	}
+	
 	/**
 	 * Metodo per la rimozione di un CD dall-archivio
 	 */
@@ -76,10 +81,11 @@ public class ArchivioCdMain {
 		
 		String titolo;
 		
-		titolo = MyInputDati.leggiStringaAlfaNumerica(MESSAGGIO_RIMUOVI_BRANO_NOME);
+		titolo = MyInputDati.leggiStringaAlfaNumerica(MESSAGGIO_RIMUOVI_CD_NOME);
 		Cd daRimuovere = archivio.getCd(titolo);
+		
 		if(daRimuovere.equals(null)){
-			System.out.println(MESSAGGIO_RIMUOVI_BRANO_NO_CD);
+			System.out.println(MESSAGGIO_RIMUOVI_NO_CD);
 		}else{
 			archivio.eliminaCd(titolo);
 		}
@@ -98,28 +104,48 @@ public class ArchivioCdMain {
 			
 			switch(scelta) {
 				case 1:
+					// aggiungere il cd all'archivio
+					
 					Cd nuovoCd;
 					nuovoCd = creaCd();
+					
 					archivio.addCd(nuovoCd);
-					// aggiungere il cd all'archivio
 					break;
 					
 				case 2:
 					//visualizza collezione cd
-					System.out.println(archivio.toString());
+					
+					if(archivio.getNumeroCd()==0) {
+						
+						System.out.println(MESSAGGIO_ARCHIVIO_VUOTO);
+					}
+					else { 
+						System.out.println(archivio.toString());
+					}
 					break;
 					
 				case 3:
 					//rimozione cd
-					rimuoviCd(archivio);
+					
+					if(archivio.getNumeroCd()==0) {
+						
+						System.out.println(MESSAGGIO_ARCHIVIO_VUOTO);
+					}
+					else { 
+						rimuoviCd(archivio);
+					}
 					break;
 					
 				case 4:
 					//selezione di un brano a caso estratto dall'intera collezione
-					if(archivio.getNumeroCd()==0)
+					
+					if(archivio.getNumeroCd()==0) {
+						
 						System.out.println(MESSAGGIO_ARCHIVIO_VUOTO);
-					else
+					}
+					else { 
 						archivio.cdCasuale().toString();
+					}
 					break;
 			  }
 

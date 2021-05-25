@@ -114,7 +114,7 @@ public class ArchivioCd {
     public String toString(){
         String out = "";
         for (Cd cd : cds) {
-            out=cd.toString()+"\n";
+            out+=cd.toString()+"\n";
         }
         return out;
     }

@@ -24,6 +24,7 @@ public class Brano {
 	 */
 	public Brano(String titolo, int minuti, int secondi) {
 		super();
+		
 		this.titolo = titolo;
 		this.minuti = minuti;
 		this.secondi = secondi;

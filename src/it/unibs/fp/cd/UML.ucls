@@ -3,7 +3,7 @@
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="it.unibs.fp.cd.ArchivioCd" project="ArchivioCd" 
     file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCd.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="480" y="83"/>    
+    <position height="-1" width="-1" x="130" y="145"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="it.unibs.fp.cd.ArchivioCdMain" project="ArchivioCd" 
     file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCdMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="165" y="519"/>    
+    <position height="-1" width="-1" x="509" y="503"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="it.unibs.fp.cd.Brano" project="ArchivioCd" 
     file="/ArchivioCd/src/it/unibs/fp/cd/Brano.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="891" y="707"/>    
+    <position height="-1" width="-1" x="903" y="144"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="it.unibs.fp.cd.Cd" project="ArchivioCd" 
     file="/ArchivioCd/src/it/unibs/fp/cd/Cd.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="886" y="418"/>    
+    <position height="-1" width="-1" x="507" y="143"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -42,29 +42,37 @@
     <end type="TARGET" refId="3"/>  
   </dependency>  
   <association id="6">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="7" name="brani">        
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="7" name="cds">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
       <multiplicity id="8" minimum="0" maximum="2147483647">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="9">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="4"/>  
-  </dependency>  
-  <association id="10">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="11" name="cds"/>      
-      <multiplicity id="12" minimum="0" maximum="2147483647"/>    
-    </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="9">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="10" name="brani">        
+        <position height="0" width="0" x="12" y="-563"/>      
+      </attribute>      
+      <multiplicity id="11" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="12" y="-563"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="12">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <dependency id="13">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
