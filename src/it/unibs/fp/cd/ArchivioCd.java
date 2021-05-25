@@ -92,17 +92,17 @@ public class ArchivioCd {
     	
     }
 
-/**
- * Controlla se un determinato cd è contenuto dell'archivio
- * @param nomeCd stringa nome del Cd, scorre l'archivio per trovare il cd chiesto dall'utente
- * @return un boolean vero se c'è, falso se non c'è
- */
-public boolean contiene(String nomeCd){ 
-    for (Cd cd : cds) {
-        if(cd.getTitolo().equals(nomeCd))
-        return true;
-    }
-    
-    return false;
-}
+	/**
+	 * Controlla se un determinato cd è contenuto dell'archivio
+	 * @param nomeCd stringa nome del Cd, scorre l'archivio per trovare il cd chiesto dall'utente
+	 * @return un boolean vero se c'è, falso se non c'è
+	 */
+	public boolean contiene(String nomeCd){ 
+	    for (Cd cd : cds) {
+	        if(cd.getTitolo().equals(nomeCd))
+	        return true;
+	    }
+	    
+	    return false;
+	}
 }
