@@ -18,6 +18,8 @@ public class ArchivioCdMain {
 	private static final String MESSAGGIO_TITOLO_BRANO = "\nInserisci il titolo del nuovo brano: ";
 	private static final String MESSAGGIO_MINUTI_BRANO = "Quanti minuta dura il brano? ";
 	private static final String MESSAGGIO_SECONDI_BRANO = "Quanti secondi dura il brano? ";
+	private static final String MESSAGGIO_RIMUOVI_BRANO_NOME = "Qual'è il titolo del brano che vuoi rimuovere? ";
+	private static final String MESSAGGIO_RIMUOVI_BRANO_NO_CD = "Non è stato trovato nessun brano con quel titolo";
 
 	/**
 	 * Metodo per la creazione di un nuovo brano
@@ -66,11 +68,26 @@ public class ArchivioCdMain {
 		
 		return nuovoCd;
 	}
+	/**
+	 * Metodo per la rimozione di un CD dall-archivio
+	 */
+	public static void rimuoviCd(ArchivioCd archivio) {
+		
+		String titolo;
+		
+		titolo = MyInputDati.leggiStringaAlfaNumerica(MESSAGGIO_RIMUOVI_BRANO_NOME);
+		Cd daRimuovere = archivio.getCd(titolo);
+		if(daRimuovere.equals(null)){
+			System.out.println(MESSAGGIO_RIMUOVI_BRANO_NO_CD);
+		}else{
+			archivio.eliminaCd(titolo);
+		}
+	}
 	
 	public static void main(String[] args) {
 		
 		int scelta;
-		Cd nuovoCd;
+		ArchivioCd archivio = new ArchivioCd();
 		
 		MyMenu menu = new MyMenu("ARCHIVIO CD", MENU);
 		
@@ -80,12 +97,15 @@ public class ArchivioCdMain {
 			
 			switch(scelta) {
 				case 1:
+					Cd nuovoCd;
 					nuovoCd = creaCd();
+					archivio.addCd(nuovoCd);
 					// aggiungere il cd all'archivio
 					break;
 					
 				case 2:
 					//visualizza collezione cd
+					System.out.println(archivio.toString());
 					break;
 					
 				case 3:
