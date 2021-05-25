@@ -20,6 +20,7 @@ public class ArchivioCdMain {
 	private static final String MESSAGGIO_SECONDI_BRANO = "Quanti secondi dura il brano? ";
 	private static final String MESSAGGIO_RIMUOVI_BRANO_NOME = "Qual'è il titolo del brano che vuoi rimuovere? ";
 	private static final String MESSAGGIO_RIMUOVI_BRANO_NO_CD = "Non è stato trovato nessun brano con quel titolo";
+	private static final String MESSAGGIO_ARCHIVIO_VUOTO = "Non ci sono CD nella tua collezione.";
 
 	/**
 	 * Metodo per la creazione di un nuovo brano
@@ -110,10 +111,15 @@ public class ArchivioCdMain {
 					
 				case 3:
 					//rimozione cd
+					rimuoviCd(archivio);
 					break;
 					
 				case 4:
 					//selezione di un brano a caso estratto dall'intera collezione
+					if(archivio.getNumeroCd()==0)
+						System.out.println(MESSAGGIO_ARCHIVIO_VUOTO);
+					else
+						archivio.cdCasuale().toString();
 					break;
 			  }
 
