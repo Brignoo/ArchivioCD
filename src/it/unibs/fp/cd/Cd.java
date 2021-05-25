@@ -74,6 +74,10 @@ public class Cd {
 		
 		return false;
 	}
+
+	public String getTitolo() {
+		return titolo;
+	}
 	
 	/**
 	 * Il metodo restituisce una stringa descrittiva del CD attraverso i suoi attributi, specificando i brani contenuti, 
