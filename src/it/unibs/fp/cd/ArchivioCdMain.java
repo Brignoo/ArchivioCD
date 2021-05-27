@@ -87,21 +87,33 @@ public class ArchivioCdMain {
 		boolean boolRimuovere = archivio.contiene(titolo);
 		
 		if(!boolRimuovere){
+			
 			System.out.println(MESSAGGIO_RIMUOVI_NO_CD);
-		}else{
+		}
+		else{
+			
 			System.out.println(MESSAGGIO_RIMUOVI_SET_ID);
 			int cont=0;
+			
 			for (Cd questoCD : archivio.getCds()) {
+				
 				if(questoCD.getTitolo().equals(titolo)){
+					
 					System.out.println("ID: "+cont+" "+questoCD.toString());
 					cont ++;
 				}
 			}
+			
 			int scelta = MyInputDati.leggiIntero(MESSAGGIO_RIMUOVI_SET_ID2, 0, cont--);
+			
 			cont=0;
+			
 			for (Cd questoCD : archivio.getCds()) {
+				
 				if(questoCD.getTitolo().equals(titolo)){
+					
 					if(cont==scelta){
+						
 						archivio.eliminaCd(questoCD);
 						return;
 					}
