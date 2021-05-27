@@ -77,7 +77,7 @@ public class ArchivioCdMain {
 	}
 	
 	/**
-	 * Metodo per la rimozione di un CD dall-archivio
+	 * Metodo per la rimozione di un CD dall'archivio
 	 */
 	public static void rimuoviCd(ArchivioCd archivio) {
 		
@@ -115,11 +115,11 @@ public class ArchivioCdMain {
 					if(cont==scelta){
 						
 						archivio.eliminaCd(questoCD);
+						return;
 					}
 					cont++;
 				}
 			}
-			archivio.eliminaCd(titolo);
 		}
 	}
 	
