@@ -14,6 +14,9 @@ public class ArchivioCd {
 
     private ArrayList<Cd> cds;
     
+    /**
+     * Costruttore della classe ArchivioCD
+     */
     public ArchivioCd() {
     	cds = new ArrayList<>();
     }
