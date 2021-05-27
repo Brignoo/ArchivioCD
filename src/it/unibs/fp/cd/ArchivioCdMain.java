@@ -21,6 +21,8 @@ public class ArchivioCdMain {
 	private static final String MESSAGGIO_RIMUOVI_CD_NOME = "Qual è il titolo del CD che vuoi rimuovere? ";
 	private static final String MESSAGGIO_RIMUOVI_NO_CD = "Non è stato trovato nessun CD con quel titolo";
 	private static final String MESSAGGIO_ARCHIVIO_VUOTO = "Non ci sono CD nella tua collezione.";
+	private static final String MESSAGGIO_RIMUOVI_SET_ID = "Seleziona l'id del CD da rimuovere tra i seguenti:";
+	private static final String MESSAGGIO_RIMUOVI_SET_ID2 = "-> ";
 	
 	private static final int MINIMO = 0;
 	private static final int MASSIMO = 60;
@@ -82,11 +84,29 @@ public class ArchivioCdMain {
 		String titolo;
 		
 		titolo = MyInputDati.leggiStringaAlfaNumerica(MESSAGGIO_RIMUOVI_CD_NOME);
-		Cd daRimuovere = archivio.getCd(titolo);
+		boolean boolRimuovere = archivio.contiene(titolo);
 		
-		if(daRimuovere == null){
+		if(!boolRimuovere){
 			System.out.println(MESSAGGIO_RIMUOVI_NO_CD);
 		}else{
+			System.out.println(MESSAGGIO_RIMUOVI_SET_ID);
+			int cont=0;
+			for (Cd questoCD : archivio.getCds()) {
+				if(questoCD.getTitolo().equals(titolo)){
+					System.out.println("ID: "+cont+" "+questoCD.toString());
+					cont ++;
+				}
+			}
+			int scelta = MyInputDati.leggiIntero(MESSAGGIO_RIMUOVI_SET_ID2, 0, cont--);
+			cont=0;
+			for (Cd questoCD : archivio.getCds()) {
+				if(questoCD.getTitolo().equals(titolo)){
+					if(cont==scelta){
+						archivio.eliminaCd(questoCD);
+					}
+					cont++;
+				}
+			}
 			archivio.eliminaCd(titolo);
 		}
 	}
