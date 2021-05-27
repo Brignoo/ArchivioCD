@@ -49,11 +49,15 @@ public class ArchivioCd {
     /**
      * Il metodo ritorna il CD
      * @param n indica l'indice del CD da cercare
-     * @return 
+     * @return ritorna il cd scelto
      */
     public Cd getCdByIndex(int n) {
     	
-    	return 
+    	if( n < cds.size() ) {
+    		return cds.get(n);
+    	}
+    	
+    	return null;
     }
     
   /**
