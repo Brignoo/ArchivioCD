@@ -18,11 +18,20 @@ public class ArchivioCd {
     	cds = new ArrayList<>();
     }
 
-/**
- * Return di un CD
- * @param nomeCd stringa nome del Cd, scorre l'archivio per trovare il cd chiesto dall'utente
- * @return il cd scelto dall'utente
- */
+    
+    /**
+     * Metodo get dell'intero archivio
+     * @return ritorna l'archivio
+     */
+    public ArrayList<Cd> getCds() {
+		return cds;
+	}
+    
+	/**
+	 * Return di un CD
+	 * @param nomeCd stringa nome del Cd, scorre l'archivio per trovare il cd chiesto dall'utente
+	 * @return il cd scelto dall'utente
+	 */
     public Cd getCd(String nomeCd){ 
     	 for (int i = 0; i < cds.size(); i++) {
     		 
@@ -35,6 +44,16 @@ public class ArchivioCd {
     	 }
     	 
     	 return null;
+    }
+    
+    /**
+     * Il metodo ritorna il CD
+     * @param n indica l'indice del CD da cercare
+     * @return 
+     */
+    public Cd getCdByIndex(int n) {
+    	
+    	return 
     }
     
   /**
