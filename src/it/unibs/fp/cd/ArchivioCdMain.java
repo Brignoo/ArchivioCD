@@ -84,7 +84,7 @@ public class ArchivioCdMain {
 		titolo = MyInputDati.leggiStringaAlfaNumerica(MESSAGGIO_RIMUOVI_CD_NOME);
 		Cd daRimuovere = archivio.getCd(titolo);
 		
-		if(daRimuovere.equals(null)){
+		if(daRimuovere == null){
 			System.out.println(MESSAGGIO_RIMUOVI_NO_CD);
 		}else{
 			archivio.eliminaCd(titolo);

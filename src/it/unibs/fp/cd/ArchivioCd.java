@@ -77,7 +77,7 @@ public class ArchivioCd {
   
     /**
      * metodo per fare la visualizzazione di un CD nell'archivio
-     * @param nomeCd
+     * @param nomeCd nome del CD
      */
     
     public void stampaCd(String nomeCd){
@@ -88,12 +88,19 @@ public class ArchivioCd {
     
     /**
      * metodo per eliminare un CD dell'archivio dato un nome
-     * @param nomeCd
+     * @param nomeCd nome del CD
      */
-    
     public void eliminaCd(String nomeCd) {
     	Cd cd = getCd(nomeCd);
     	cds.remove(cd);
+    }
+    
+    /**
+     * metodo per eliminare un CD dell'archivio dato il CD
+     * @param cd oggetto Cd da eliminare
+     */
+    public boolean eliminaCd(Cd cd) {
+    	return cds.remove(cd);
     }
     
     /**
