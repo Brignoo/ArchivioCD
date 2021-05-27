@@ -79,7 +79,6 @@ public class ArchivioCd {
      * metodo per fare la visualizzazione di un CD nell'archivio
      * @param nomeCd nome del CD
      */
-    
     public void stampaCd(String nomeCd){
     	Cd cd = getCd(nomeCd); 
     	System.out.println(cd);    	    	
@@ -107,7 +106,6 @@ public class ArchivioCd {
      * metodo per la selezione casuale del CD
      * @return il CD casuale all'interno dell'archivio
      */
-    
     public Cd cdCasuale() {
     	int indice = EstrazioniCasuali.estraiIntero(0, cds.size()-1);
     	return cds.get(indice);
@@ -118,7 +116,6 @@ public class ArchivioCd {
      * metodo che restituisce il numero di CD presenti nell'archivio
      * @return di size CD
      */
-    
     public int getNumeroCd() {
     
     	return cds.size();
