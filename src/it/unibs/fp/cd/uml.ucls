@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
   realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="it.unibs.fp.cd.Cd" project="ArchivioCd" 
-    file="/ArchivioCd/src/it/unibs/fp/cd/Cd.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="408" y="482"/>    
+  <class id="1" language="java" name="it.unibs.fp.cd.ArchivioCdTest" project="ArchivioCd" 
+    file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCdTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="857" y="103"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="it.unibs.fp.cd.BranoTest" project="ArchivioCd" 
-    file="/ArchivioCd/src/it/unibs/fp/cd/BranoTest.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="123" y="131"/>    
+  <class id="2" language="java" name="it.unibs.fp.cd.CdTest" project="ArchivioCd" 
+    file="/ArchivioCd/src/it/unibs/fp/cd/CdTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="854" y="298"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="it.unibs.fp.cd.Brano" project="ArchivioCd" 
-    file="/ArchivioCd/src/it/unibs/fp/cd/Brano.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="415" y="130"/>    
+  <class id="3" language="java" name="it.unibs.fp.cd.ArchivioCd" project="ArchivioCd" 
+    file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCd.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="112" y="156"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,86 +30,62 @@
   </class>  
   <class id="4" language="java" name="it.unibs.fp.cd.ArchivioCdMain" project="ArchivioCd" 
     file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCdMain.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="820" y="490"/>    
+    <position height="-1" width="-1" x="582" y="275"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="it.unibs.fp.cd.CdTest" project="ArchivioCd" 
-    file="/ArchivioCd/src/it/unibs/fp/cd/CdTest.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="123" y="483"/>    
+  <class id="5" language="java" name="it.unibs.fp.cd.Brano" project="ArchivioCd" 
+    file="/ArchivioCd/src/it/unibs/fp/cd/Brano.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="342" y="470"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="it.unibs.fp.cd.ArchivioCd" project="ArchivioCd" 
-    file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCd.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="414" y="842"/>    
+  <class id="6" language="java" name="it.unibs.fp.cd.Cd" project="ArchivioCd" 
+    file="/ArchivioCd/src/it/unibs/fp/cd/Cd.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="342" y="157"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="it.unibs.fp.cd.ArchivioCdTest" project="ArchivioCd" 
-    file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCdTest.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="121" y="841"/>    
+  <class id="7" language="java" name="it.unibs.fp.cd.BranoTest" project="ArchivioCd" 
+    file="/ArchivioCd/src/it/unibs/fp/cd/BranoTest.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="852" y="497"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <dependency id="8">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <dependency id="9">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="10">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <dependency id="11">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="12">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="13">    
-    <end type="SOURCE" refId="7"/>    
-    <end type="TARGET" refId="1"/>  
-  </dependency>  
-  <dependency id="14">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="3"/>  
-  </dependency>  
-  <association id="15">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="16" name="brani"/>      
-      <multiplicity id="17" minimum="0" maximum="2147483647"/>    
+  <association id="8">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="9" name="cds">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="10" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <dependency id="18">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="6"/>  
-  </dependency>  
-  <association id="19">    
+  <association id="11">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="20" name="cds"/>      
-      <multiplicity id="21" minimum="0" maximum="2147483647"/>    
+      <attribute id="12" name="brani">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

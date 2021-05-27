@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
-  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+<class-diagram version="1.2.4" icons="true" automaticImage="PNG" always-add-relationships="true" generalizations="true" 
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="it.unibs.fp.cd.ArchivioCdTest" project="ArchivioCd" 
     file="/ArchivioCd/src/it/unibs/fp/cd/ArchivioCdTest.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="857" y="103"/>    
@@ -66,16 +66,24 @@
   </class>  
   <association id="8">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="9" name="cds"/>      
-      <multiplicity id="10" minimum="0" maximum="2147483647"/>    
+      <attribute id="9" name="cds">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="10" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="11">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="12" name="brani"/>      
-      <multiplicity id="13" minimum="0" maximum="2147483647"/>    
+      <attribute id="12" name="brani">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="13" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
